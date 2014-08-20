@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.tesis.sal/src-gen" editDirectory="/org.xtext.tesis.sal.edit/src"
+    editorDirectory="/org.xtext.tesis.sal.editor/src" modelPluginID="org.xtext.tesis.sal"
+    forceOverwrite="true" modelName="SAL" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.xtext.tesis.sal.edit"
+    editorPluginID="org.xtext.tesis.sal.editor" runtimeVersion="2.9">
+  <genPackages prefix="SAL" basePackage="org.xtext.tesis" disposableProviderFactory="true"
+      fileExtensions="sal" ecorePackage="SAL.ecore#/">
+    <genClasses ecoreClass="SAL.ecore#//Context">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//Context/contextName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SAL.ecore#//Context/body"/>
+    </genClasses>
+    <genClasses ecoreClass="SAL.ecore#//Body">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SAL.ecore#//Body/types"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SAL.ecore#//Body/module"/>
+    </genClasses>
+    <genClasses ecoreClass="SAL.ecore#//TypeDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//TypeDeclaration/typeName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//TypeDeclaration/typeValues"/>
+    </genClasses>
+    <genClasses ecoreClass="SAL.ecore#//ModuleDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//ModuleDeclaration/moduleName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SAL.ecore#//ModuleDeclaration/module"/>
+    </genClasses>
+    <genClasses ecoreClass="SAL.ecore#//Module">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SAL.ecore#//Module/declaration"/>
+    </genClasses>
+    <genClasses ecoreClass="SAL.ecore#//Declarations">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SAL.ecore#//Declarations/variableDeclarations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//Declarations/definitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SAL.ecore#//Declarations/initialisations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SAL.ecore#//Declarations/transitions"/>
+    </genClasses>
+    <genClasses ecoreClass="SAL.ecore#//VarDecl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//VarDecl/variableName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SAL.ecore#//VarDecl/valueSet"/>
+    </genClasses>
+    <genClasses ecoreClass="SAL.ecore#//ValueSet"/>
+    <genClasses ecoreClass="SAL.ecore#//Scalar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//Scalar/name"/>
+    </genClasses>
+    <genClasses ecoreClass="SAL.ecore#//Subrange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//Subrange/lowerBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//Subrange/upperBound"/>
+    </genClasses>
+    <genClasses ecoreClass="SAL.ecore#//Initialisation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//Initialisation/variable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//Initialisation/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SAL.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//Transition/transitionNumer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SAL.ecore#//Transition/guards"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SAL.ecore#//Transition/assignments"/>
+    </genClasses>
+    <genClasses ecoreClass="SAL.ecore#//Guard">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//Guard/variable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//Guard/value"/>
+    </genClasses>
+    <genClasses ecoreClass="SAL.ecore#//Assignment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//Assignment/variable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SAL.ecore#//Assignment/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

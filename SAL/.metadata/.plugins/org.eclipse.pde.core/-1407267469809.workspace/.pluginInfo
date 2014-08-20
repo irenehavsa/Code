@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="1124" localization="OSGI-INF/l10n/bundle" name="org.xtext.tesis.sal" project="org.xtext.tesis.sal" provider="My Company"/>
+	<bundle bundleID="1125" class="org.xtext.tesis.ui.internal.SALActivator" localization="OSGI-INF/l10n/bundle" name="org.xtext.tesis.sal.ui" project="org.xtext.tesis.sal.ui" provider="My Company"/>
+	<bundle bundleID="1126" localization="OSGI-INF/l10n/bundle" name="org.xtext.tesis.sal.tests" project="org.xtext.tesis.sal.tests" provider="My Company"/>
+</map>

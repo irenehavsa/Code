@@ -1,0 +1,10 @@
+grammar org.xtext.tesis.SAL with org.eclipse.xtext.common.Terminals
+
+generate sAL "http://www.xtext.org/tesis/SAL"
+
+Context:
+	identifier=STRING ':' greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
+	

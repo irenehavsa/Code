@@ -1,0 +1,69 @@
+grammar org.xtext.tesis.SAL with org.eclipse.xtext.common.Terminals
+
+generate sAL "http://www.xtext.org/tesis/SAL"
+
+Context:
+	contextName=STRING ': CONTEXT=' body=Body;
+
+Body:
+	'BEGIN' (types+=TypeDeclaration) module=ModuleDeclaration 'END'	
+;
+
+TypeDeclaration:
+	typeName=STRING ': TYPE={' (typeValues+=STRING) '};'
+;
+
+ModuleDeclaration:
+	moduleName=STRING ': MODULE=' module=Module
+;
+
+Module:
+	'BEGIN' (declaration+=Declarations) 'END'
+;
+
+Declarations:
+	'INPUT' (variableDeclarations+=VarDecl) |
+	'OUTPUT' (variableDeclarations+=VarDecl) |
+	'LOCAL' (variableDeclarations+=VarDecl)	|
+	'DEFINITION' (definitions+=Definition) |
+	'INITIALIZATION' (initialisations+=Initialisation) |
+	'TRANSITION [' (transitions+=Transition) ']'
+;
+
+VarDecl:
+	variableName=STRING ':' valueSet=ValueSet
+;
+
+ValueSet:
+	Scalar | Subrange
+;
+
+Scalar:
+	name=STRING
+;
+
+Subrange:
+	'[' lowerBound=INT '..' upperBound=INT ']'
+;
+
+Definition:
+	'TO BE CONTINUED'
+;
+
+Initialisation:
+	variable=STRING '=' value=STRING ';'
+;
+
+Transition:
+	transitionNumer=STRING ':'
+	(guards+=Guard) '-->'
+	(assignments+=Assignment)
+;
+
+Guard:
+	variable=STRING '=' value=STRING
+;
+
+Assignment:
+	variable=STRING "'=" value=STRING
+;

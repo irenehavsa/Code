@@ -1,0 +1,22 @@
+grammar org.xtext.tesis.SAL with org.eclipse.xtext.common.Terminals
+
+generate sAL "http://www.xtext.org/tesis/SAL"
+
+Context:
+	contextName=STRING ': CONTEXT=' body=Body;
+
+Body:
+	'BEGIN' (types+=TypeDeclaration) module=ModuleDeclaration 'END'	
+;
+
+TypeDeclaration:
+	typeName=STRING ': TYPE={' (typeValues+=STRING) '};'
+;
+
+ModuleDeclaration:
+	moduleName=STRING ': MODULE=' module=Module
+;
+
+Module:
+	
+;

@@ -1,0 +1,9 @@
+grammar org.xtext.tesis.SAL with org.eclipse.xtext.common.Terminals
+
+generate sAL "http://www.xtext.org/tesis/SAL"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
